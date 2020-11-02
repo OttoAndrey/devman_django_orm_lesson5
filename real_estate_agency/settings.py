@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     'property.apps.PropertyConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -98,6 +99,8 @@ THOUSAND_SEPARATOR = '&nbsp;'
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+PHONENUMBER_DEFAULT_REGION = 'RU'
 
 DATABASES = {
     'default': dj_database_url.parse(os.getenv("DATABASE", "sqlite:///db.sqlite3")),
